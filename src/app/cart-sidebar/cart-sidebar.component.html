@@ -1,0 +1,60 @@
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartSidebar" *ngIf="cartItems$ | async as items">
+  <div class="offcanvas-header">
+    <h5 class="mb-0">
+      Koszyk
+      <span class="badge bg-primary ms-2">
+        {{ items.length }}
+      </span>
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column"
+       *ngIf="cartItems$ | async as items">
+    <div *ngIf="items.length === 0"
+         class="text-center text-muted py-5">
+      Koszyk jest pusty
+    </div>
+    <div *ngIf="items.length > 0" class="mb-3">
+      <div *ngFor="let item of items"
+           class="px-0 border-bottom pb-3 mb-3">
+        <div class="d-flex gap-3">
+          <img [src]="item.product.image"
+               class="rounded"
+               style="width: 80px; height: 80px; object-fit: cover;" />
+          <div class="flex-grow-1">
+            <h6 class="mb-1">{{ item.product.name }}</h6>
+            <p class="text-muted small mb-2">
+              {{ item.product.price }} zł
+            </p>
+            <div class="d-flex align-items-center gap-2">
+              <button class="btn btn-outline-secondary btn-sm"
+                      (click)="decreaseQuantity(item.product.id)">−</button>
+              <span class="px-2">{{ item.quantity }}</span>
+              <button class="btn btn-outline-secondary btn-sm"
+                      (click)="increaseQuantity(item.product.id)">+</button>
+            </div>
+          </div>
+          <div class="d-flex flex-column align-items-end">
+            <button class="btn btn-outline-danger btn-sm ms-auto"
+                    (click)="remove(item.product.id)">
+              🗑
+            </button>
+            <div class="text-end mt-2">
+              {{ (item.product.price * item.quantity).toFixed(2) }} zł
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="items.length > 0"
+         class="border-top pt-3 mt-auto">
+      <div class="d-flex justify-content-between mb-3">
+        <span>Suma całkowita:</span>
+        <strong class="h5 mb-0">{{ totalPrice() }} zł</strong>
+      </div>
+      <button class="btn btn-success w-100 btn-lg">
+        Przejdź do płatności
+      </button>
+    </div>
+  </div>
+</div>

@@ -4,13 +4,20 @@ import { CommonModule } from '@angular/common';
 import { FilterPanelComponent } from "./filter-panel/filter-panel.component";
 import { CartSidebarComponent } from "./cart-sidebar/cart-sidebar.component";
 import { ProductCardComponent } from './product-card/product-card.component';
+
 import { Product } from './models/product';
 import { ProductService } from './services/product.service';
 import { Filters } from './models/filters';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [FilterPanelComponent, CartSidebarComponent, ProductCardComponent, CommonModule],
+  imports: [
+    FilterPanelComponent,
+    CartSidebarComponent, 
+    ProductCardComponent, 
+    CommonModule
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -30,7 +37,4 @@ export class AppComponent {
     this.filteredProducts = this.productService.filterProducts(filters);
   }
 
-  toggleCart() {
-    // toggle cart sidebar visibility
-  }
 }

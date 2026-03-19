@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { ProductService } from '../services/product.service';
 import { Product } from '../models/product';
 import { CommonModule } from '@angular/common';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-product-card',
@@ -11,8 +11,10 @@ import { CommonModule } from '@angular/common';
 })
 export class ProductCardComponent {
 
-  addToCart() {
-    // logika dodawania produktu do koszyka
+  constructor(private cartService: CartService) {}
+
+  addToCart(product: Product) {
+    this.cartService.addToCart(product);
   }
   @Input() product!: Product;
 }
