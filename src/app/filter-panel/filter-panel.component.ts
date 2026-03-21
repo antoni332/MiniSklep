@@ -11,10 +11,6 @@ import { Filters } from '../models/filters';
   styleUrl: './filter-panel.component.css'
 })
 export class FilterPanelComponent {
-  // minPriceValue = 0;
-  // maxPriceValue = 5000;
-  // selectedCategory: string = '';
-  // searchTerm: string = '';
 
   categories: string[] = [];
   constructor(private productService: ProductService) {}
