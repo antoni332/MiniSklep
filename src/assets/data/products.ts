@@ -3,27 +3,27 @@ import { Product } from "../../app/models/product";
 export const PRODUCTS: Product[] = [
   {
     id: 1,
-    name: 'Laptop Premium',
+    name: 'Macbook Pro 16\"',
     price: 3999.99,
     category: 'Elektronika',
-    description: 'Wydajny laptop do pracy i rozrywki.',
+    description: 'Najbardziej zaawansowany Macbook Pro z procesorem M1 Pro, 16 GB RAM i 1 TB SSD. Do wymagających zadań.',
     image: 'images/macbook.jpg'
   },
   {
     id: 2,
-    name: 'Smartfon Pro',
+    name: 'Samsung Galaxy S26 Ultra',
     price: 2499.99,
     category: 'Elektronika',
-    description: 'Najnowszy smartfon z aparatem 108 MP i 5G.',
-    image: 'images/smartphone_s26.jpg'
+    description: 'Galaxy S26 Ultra — topowy smartfon z AI, zaawansowaną kamerą i mocnym procesorem. Dla tych, którzy chcą najlepszego.',
+    image: 'images/samsung_s26U.jpg'
   },
   {
     id: 3,
-    name: 'Słuchawki bezprzewodowe',
+    name: 'Bowers & Wilkins Pi8',
     price: 299.99,
     category: 'Elektronika',
-    description: 'Wysokiej jakości słuchawki z aktywną redukcją szumów.',
-    image: 'images/wireless_bw.jpg'
+    description: 'Pi8. Nowe słuchawki w-ear. Klasa audio najwyższej jakości, dedykowane ANC i kryształowo czysta jakość rozmów w eleganckim, dobrze przemyślanym designie.',
+    image: 'images/BW_Pi8.jpeg'
   },
   {
     id: 4,
@@ -51,10 +51,10 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 7,
-    name: 'Elegancki zegarek',
-    price: 599.99,
+    name: 'Patek Philippe 5327G-001 Grand Complications',
+    price: 15700.99,
     category: 'Akcesoria',
-    description: 'Elegancki zegarek na każdą okazję.',
+    description: 'Luksusowy zegarek z kalendarzem wiecznym, białe złoto. Idealny dla wymagających miłośników luksusu i precyzji.',
     image: 'images/patek_watch.jpg'
   },
   {
