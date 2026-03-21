@@ -52,7 +52,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 7,
     name: 'Patek Philippe 5327G-001 Grand Complications',
-    price: 15700.99,
+    price: 4999.99,
     category: 'Akcesoria',
     description: 'Luksusowy zegarek z kalendarzem wiecznym, białe złoto. Idealny dla wymagających miłośników luksusu i precyzji.',
     image: 'images/patek_watch.jpg'
