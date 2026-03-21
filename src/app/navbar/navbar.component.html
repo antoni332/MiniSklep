@@ -1,0 +1,21 @@
+<nav class="navbar bg-primary mb-4 shadow-sm" *ngIf="cartItems$ | async as items">
+  <div class="container-fluid">
+    <a class="navbar-brand text-light" href="#">
+      <i class="bi bi-cart4"></i>
+      Mini Sklep
+    </a>
+    
+    <button
+      class="btn btn-light position-relative"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#cartSidebar"
+      >
+      <i class="bi bi-cart3"></i>
+      <span *ngIf="items.length > 0" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        {{ items.length }}
+      </span>
+    </button>
+  </div>
+</nav>
+
+
