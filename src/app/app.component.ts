@@ -4,17 +4,18 @@ import { CommonModule } from '@angular/common';
 import { FilterPanelComponent } from "./filter-panel/filter-panel.component";
 import { CartSidebarComponent } from "./cart-sidebar/cart-sidebar.component";
 import { ProductCardComponent } from './product-card/product-card.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 import { Product } from './models/product';
 import { ProductService } from './services/product.service';
 import { Filters } from './models/filters';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   imports: [
+    NavbarComponent,
     FilterPanelComponent,
-    CartSidebarComponent, 
+    CartSidebarComponent,
     ProductCardComponent, 
     CommonModule
   ],

@@ -13,14 +13,9 @@ import { CartService } from '../services/cart.service';
 export class CartSidebarComponent {
 
   cartItems$!: Observable<CartItem[]>;
-  isOpen: boolean = false;
 
   constructor(private cartService: CartService) {
     this.cartItems$ = this.cartService.cartItems$;
-  }
-
-  toggleCart() {
-    this.isOpen = !this.isOpen;
   }
 
   remove(id: number) {

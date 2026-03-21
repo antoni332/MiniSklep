@@ -1,20 +1,4 @@
-<nav class="navbar bg-primary mb-4 shadow-sm">
-  <div class="container-fluid">
-    <a class="navbar-brand text-light" href="#">
-      <i class="bi bi-cart4"></i>
-      Mini Sklep
-    </a>
-    
-    <button
-      class="btn btn-light position-relative"
-      data-bs-toggle="offcanvas"
-      data-bs-target="#cartSidebar"
-      >
-      <i class="bi bi-cart3"></i>
-      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{ cartItemCount }}</span>
-    </button>
-  </div>
-</nav>
+<app-navbar></app-navbar>
 
 <div class="container">
   <div class="row">
@@ -23,7 +7,10 @@
     </div>
     
     <div class="col-lg-9">
-      <!-- Produkty -->
+      <h4>
+        Produkty
+        <span class="badge bg-secondary ms-2">{{ filteredProducts.length }}</span>
+      </h4>
       <div class="row g-3">
         <div class="col-md-6 col-xl-4" *ngFor="let product of filteredProducts">
           <app-product-card [product]="product"></app-product-card>
